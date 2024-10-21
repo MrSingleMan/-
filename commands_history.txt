@@ -1,3 +1,4 @@
+Меркулов Александр Сергеевич. 27.10.2024. Номер группы 6387
     1  mkdir Home
     2  mkdir Home/bin
     3  cp /bin/bash Home/bin
