@@ -1,0 +1,234 @@
+Меркулов Александр Сергеевич. 27.10.2024. Номер группы 6387
+    1  mkdir Home
+    2  mkdir Home/bin
+    3  cp /bin/bash Home/bin
+    4  ldd /bin/bash
+    5  mkdir Home/lib
+    6  mkdir Home/lib64
+    7  cp /lib/x86_64-linux-gnu/libtinfo.so.6 Home/lib
+    8  cp /lib/x86_64-linux-gnu/libc.so.6 Home/lib
+    9  cp /lib/x86_64-linux-gnu/libc.so Home/lib
+   10  cp /lib64/ld-linux-x86-64.so.2 Home/lib64
+   11  sudo chroot Home
+   12  sudo apt update
+   13  sudo apt install util-linux
+   14  unshare --help
+   15  clear
+   16  unshare --pid --net --fork --mount-proc --mount //bin/bash
+   17  unshare --pid --net --fork --mount-proc --mount /bin/bash
+   18  unshare --pid --net --fork --mount-proc / /bin/bash
+   19  sudo unshare --pid --net --fork --mount-proc --mount /bin/bash
+   20  mkdir /sys/fs/cgroup/testgroup1
+   21  sudo apt install openssh-server
+   22  sudo apt install gcc make perl
+   23  clear
+   24  sudo apt install cgroup tools
+   25  sudo apt install cgroup-tools
+   26  unshare --fork --pid --mount-proc bash
+   27  sudo unshare --fork --pid --mount-proc bash
+   28  cgexec -g memory:mytestgroup bash
+   29  exit
+   30  sudo unshare --fork --pid --mount-proc bash
+   31  apt install lxc lxc-templates^C
+   32  sudo apt install lxc lxc-templates^C
+   33  sudo apt install lxc debootstrap bridge-utils lxc-templates
+   34  sudo apt install lxc lxc-templates^C
+   35  lxc-create -n test123 -t ubuntu
+   36  lsc-ls
+   37  lxc-ls
+   38  lxc-create -n test123 -t ubuntu
+   39  sudo lxc-create -n test123 -t ubuntu
+   40  lxc-ls
+   41  lxc-ls test123
+   42  lxc-stop test123
+   43  /var/lib/lxc/test123/config
+   44  sudo /var/lib/lxc/test123/config
+   45  vi /var/lib/lxc/test123/config
+   46  lxc-start test123
+   47  sudo lxc-create -n test123 -t ubuntu
+   48  sudo unshare --fork --pid --mount-proc bash
+   49  # Add Docker's official GPG key:
+   50  sudo apt-get update
+   51  sudo apt-get install ca-certificates curl
+   52  sudo install -m 0755 -d /etc/apt/keyrings
+   53  sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+   54  sudo chmod a+r /etc/apt/keyrings/docker.asc
+   55  # Add the repository to Apt sources:
+   56  echo   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+   57    $(. /etc/os-release && echo "$VERSION_CODENAME") stable" |   sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+   58  sudo apt-get update
+   59  sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+   60  docker help
+   61  clear
+   62  docker run --rm -d --name hw3 -v/home/HW3/mdb_testdb:/var/lib/mysql mairadb:10.10.2
+   63  docker run --rm -d --name hw3 -v/home/HW3/mdb_testdb:/var/lib/mysql -- env MARIADB_ROOT_PASSWORD=my-secret-pw mairadb:latest
+   64  sudo docker run hello-world
+   65  sudo docker run --rm -d --name hw3 -v/home/HW3/mdb_testdb:/var/lib/mysql -- env MARIADB_ROOT_PASSWORD=my-secret-pw mairadb:latest
+   66  docker pull mariadb
+   67  systemctl status doker
+   68  systemctl start doker
+   69  docker --version
+   70  sudo start doker
+   71  sudo systemctl start doker
+   72  sudo docker run hello-world
+   73  sudo docker pull mariadb
+   74  sudo docker run --rm -d --name hw3 -v/home/HW3/mdb_testdb:/var/lib/mysql -- env MARIADB_ROOT_PASSWORD=my-secret-pw mairadb:latest
+   75  docker run -it --name mariadb -- env MARIADB_ROOT_PASSWORD=123 mariadb
+   76  sudo docker run -it --name mariadb -- env MARIADB_ROOT_PASSWORD=123 mariadb
+   77  docker ps -a
+   78  sudo docker ps -a
+   79  sudo docker run --rm -d --name hw3 -v/home/HW3/mdb_testdb:/var/lib/mysql -- env MARIADB_ROOT_PASSWORD=my-secret-pw mairadb:latest
+   80  sudo vi Dokerfile
+   81  vi Dockerfile
+   82  sudo vi Dockerfile
+   83  sudo docker build -t cowsaytest
+   84  sudo docker build -t cowsaytest .
+   85  sudo vi Dockerfile
+   86  sudo docker build -t cowsaytest .
+   87  sudo vi Dockerfile
+   88  sudo docker build -t cowsaytest .
+   89  sudo vi Dockerfile
+   90  clear
+   91  docker --version
+   92  sudo systemctl start docker
+   93  sudo systemctl enable docker
+   94  sudo apt install docker-compose
+   95  docker-compose --version
+   96  sudo apt install docker-compose
+   97  docker-compose --version
+   98  mkdir my_project
+   99  cd my_project
+  100  vi docker-compose.yml
+  101  cd my_project
+  102  vi docker-compose.yml
+  103  docker-compose up -d
+  104  docker ps
+  105  sudo docker ps
+  106  sudo docker-compose up -d
+  107  sudo apt install python3-distutils
+  108  sudo apt install python3-apt python3-pip python3-dev
+  109  sudo apt install python3-pip
+  110  sudo apt install python3-distutils
+  111  sudo docker-compose up -d
+  112  sudo docker ps
+  113  vi docker-compose.yml
+  114  clear
+  115  mkdir dev prod lav
+  116  cp docker-compose.yml dev/
+  117  cp docker-compose.yml prod/
+  118  mkdir lab
+  119  cp docker-compose.yml lab/
+  120  vi dev/docker-compose.yml
+  121  vi prod/docker-compose.yml
+  122  vi lab/docker-compose.yml
+  123  cd dev
+  124  clear
+  125  docker-compose up -d
+  126  sudo docker-compose up -d
+  127  cd prod
+  128  cd ../prod
+  129  sudo docker-compose up -d
+  130  cd ../lab
+  131  sudo docker-compose up -d
+  132  docker ps
+  133  clear
+  134  sudo docker ps
+  135  cd ../prod
+  136  sudo docker ps
+  137  cd dev
+  138  cd ../dev
+  139  sudo docker ps
+  140  clear
+  141  vi docker-compose.dev.yml
+  142  cd
+  143  cd my_project/
+  144  touch docker-compose.dev.yml
+  145  touch docker-compose.lab.yml
+  146  vi docker-compose.dev.yml
+  147  vi docker-compose.lab.yml
+  148  sudo docker-compose -f docker-compose.dev.yml up -d
+  149  sudo docker-compose -f docker-compose.lab.yml up -d
+  150  docker ps
+  151  sudo docker ps
+  152  docker-compose -f docker-compose.dev.yml config
+  153  docker-compose -f docker-compose.lab.yml config
+  154  docker compose -f -a
+  155  docker stop $(docker ps -q)
+  156  clear
+  157  docker rm $(docker ps -a -q)
+  158  docker ps
+  159  sudo docker ps
+  160  sudo docker rm $(docker ps -a -q)
+  161  clear
+  162  sudo docker stop $(docker ps -q)
+  163  sudo docker rm $(docker ps -a -q)
+  164  sudo docker ps
+  165  sudo docker stop $(docker ps -q)
+  166  sudo docker stop $(sudo docker ps -q)
+  167  sudo docker rm $(sudo docker ps -a -q)
+  168  sudo docker ps
+  169  clear
+  170  sudo docker-compose -f docker-compose.dev.yml up -d
+  171  sudo docker-compose -f docker-compose.lab.yml up -d
+  172  vi docker-compose.lab.yml
+  173  sudo docker system prune -a
+  174  sudo docker-compose -f docker-compose.lab.yml up --build
+  175  sudo docker ps
+  176  sudo docker-compose -f docker-compose.dev.yml up -d
+  177  sudo docker-compose -f docker-compose.lab.yml up -d
+  178  sudo docker ps
+  179  vi docker-compose.dev.yml
+  180  vi docker-compose.lab.yml
+  181  sudo docker-compose -f docker-compose.lab.yml config
+  182  sudo docker stop $(sudo docker ps -q)
+  183  sudo docker rm $(sudo docker ps -a -q)
+  184  sudo docker volume prune
+  185  sudo docker-compose -f docker-compose.lab.yml up -d
+  186  sudo docker-compose -f docker-compose.dev.yml up -d
+  187  vi docker-compose.dev.yml
+  188  vi docker-compose.lab.yml
+  189  sudo docker stop $(sudo docker ps -q)
+  190  sudo docker rm $(sudo docker ps -a -q)
+  191  sudo docker-compose -f docker-compose.dev.yml up -d
+  192  sudo docker-compose -f docker-compose.lab.yml up -d
+  193  sudo docker-compose -f docker-compose.lab.yml down
+  194  sudo docker rm my_project_db_1
+  195  sudo docker-compose -f docker-compose.dev.yml up -d
+  196  sudo docker ps
+  197  sudo docker-compose -f docker-compose.lab.yml up -d
+  198  sudo docker stop $(sudo docker ps -q)
+  199  sudo docker rm $(sudo docker ps -a -q)
+  200  sudo docker volume prune
+  201  mkdir my_project2
+  202  cd my_project2/
+  203  [200~touch docker-compose.lab.yml
+  204  touch docker-compose.dev.yml
+  205  touch docker-compose.lab.yml
+  206  vi docker-compose.lab.yml
+  207  vi docker-compose.dev.yml
+  208  sudo docker-compose -f docker-compose.lab.yml up -d
+  209  sudo docker-compose -f docker-compose.dev.yml up -d
+  210  sudo docker ps
+  211  vi docker-compose.dev.yml
+  212  sudo docker-compose -f docker-compose.dev.yml up -d
+  213  vi docker-compose.dev.yml
+  214  sudo docker-compose -f docker-compose.dev.yml up -d
+  215  vi docker-compose.dev.yml
+  216  sudo docker-compose -f docker-compose.dev.yml up -d
+  217  sudo docker-compose -f docker-compose.dev.yml logs
+  218  sudo docker ps
+  219  cat > Pets.txt
+  220  cat > PackAnimals.txt
+  221  cat Pets.txt PackAnimals.txt > Combined.txt
+  222  cat Combined.txt
+  223  mv Combined.txt HumanFriends.txt
+  224  ls
+  225  mkdir Animal
+  226  mv HumanFriends.txt Animal/
+  227  [200~sudo apt update
+  228  sudo apt update
+  229  sudo apt list --upgradable
+  230  sudo apt install update
+  231  systemctl status mysql
+  232  sudo apt install mysql-server
+  233  history > commands_history.txt
