@@ -3,8 +3,4 @@ public class Hamsters extends Pets{
         super(name, birthDate);
     }
 
-    @Override
-    public void performCommand(String command) {
-        System.out.println(getName() + " (Hamster) performs: " + command);
-    }
 }

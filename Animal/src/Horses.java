@@ -3,8 +3,5 @@ public class Horses extends PackAnimals{
         super(name, birthDate);
     }
 
-    @Override
-    public void performCommand(String command) {
-        System.out.println(getName() + " (Horse) performs: " + command);
-    }
+
 }

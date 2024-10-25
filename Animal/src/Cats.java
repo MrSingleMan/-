@@ -3,8 +3,5 @@ public class Cats extends Pets{
         super(name, birthDate);
     }
 
-    @Override
-    public void performCommand(String command) {
-        System.out.println(getName() + " (Cat) performs: " + command);
-    }
+
 }
