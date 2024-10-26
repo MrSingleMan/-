@@ -18,7 +18,8 @@ public class ConsoleUserInterface implements UserInterface {
             System.out.println("2. Показать команды животного");
             System.out.println("3. Обучить животное новой команде");
             System.out.println("4. Показать животных по дате рождения");
-            System.out.println("5. Выйти");
+            System.out.println("5. Показать общее количество животных");
+            System.out.println("6. Выйти");
             System.out.print("Выберите пункт меню: ");
 
             int choice = scanner.nextInt();
@@ -29,7 +30,8 @@ public class ConsoleUserInterface implements UserInterface {
                 case 2 -> showAnimalCommands();
                 case 3 -> trainAnimal();
                 case 4 -> listAnimalsByBirthDate();
-                case 5 -> {
+                case 5 -> System.out.println("Общее количество животных: " + Animal.getAnimalCount());
+                case 6 -> {
                     running = false;
                     System.out.println("Выход из программы...");
                 }

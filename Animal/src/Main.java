@@ -4,5 +4,4 @@ public class Main {
         UserInterface UserInterface = new ConsoleUserInterface(registry);
         UserInterface.start();
     }
-
 }

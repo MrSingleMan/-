@@ -1,16 +1,14 @@
-import java.util.ArrayList;
-import java.util.List;
-
 public class Animal {
     private String name;
     private String birthDate;
     private String commands;
-    //private List<String> commands;
+    private static int animalCount = 0;
 
     public Animal(String name, String birthDate, String commands) {
         this.name = name;
         this.birthDate = birthDate;
         this.commands = commands;
+        animalCount++;
     }
 
     public String getCommands() {
@@ -31,5 +29,9 @@ public class Animal {
 
     public String getBirthDate() {
         return birthDate;
+    }
+
+    public static int getAnimalCount() {
+        return animalCount;
     }
 }
